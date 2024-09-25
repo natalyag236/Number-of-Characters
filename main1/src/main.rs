@@ -12,14 +12,11 @@ pub fn main() {
         .read_line(&mut input)
         .expect("Failed to read user input ");
        
-    // counter for the toatl num of characters 
-    let mut counter: i32 = 0;
+   
     // the hashmap stores the character count 
     let mut char_count: HashMap<char, i32> = HashMap::new(); 
     // goes over each character from the input string 
     for ch in input.chars() {
-        counter += 1;
-
         let count: &mut i32 = char_count.entry(ch).or_insert(0);
         *count += 1;
     }
@@ -33,10 +30,12 @@ pub fn main() {
             max_char = *ch;
         }
     }
-    // Print the toatl numbers of characters 
-    println!("Total num of characters: {}", counter); 
+    
+    
     // Prints the most frequent characters and how many times it appears 
     if max_count > 1 {
         println!("The most frequent occurring character is '{}' and appears {} times.", max_char, max_count);
+    }else{
+        print!("No repeating characters")
     }
 }
