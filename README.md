@@ -1,3 +1,3 @@
 # Number-of-Characters
 
-The user will enter a string, and the program will also count the number of characters, if there are frequently used characters, and how often they appear.
+This Rust program will read a string from the user, count the occurrences of each character, and print the most frequent character along with how many times it appears. If no characters are repeated, it informs the user.
